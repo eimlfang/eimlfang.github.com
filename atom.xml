@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[我的时光]]></title>
   <link href="http://eimlfang.github.io/atom.xml" rel="self"/>
   <link href="http://eimlfang.github.io/"/>
-  <updated>2015-09-08T17:01:07+08:00</updated>
+  <updated>2015-09-08T17:31:22+08:00</updated>
   <id>http://eimlfang.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Zijian Fang]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -30,44 +30,63 @@
 
 <h2>-Install Octopress</h2>
 
-<p>  input:<br/>
-  <strong>git clone git://github.com/imathis/octopress.git octopress</strong><br/>
-  git will clone Octopress from github to local dictionary named &ldquo;octopress&rdquo;<br/>
-  than input :<br/>
-  <strong>cd octopress</strong></p>
+<p>  input:</p>
+
+<pre><code>  git clone git://github.com/imathis/octopress.git octopress**  
+</code></pre>
+
+<p>  git will clone Octopress from github to local dictionary named &ldquo;octopress&rdquo;<br/>
+  than input :</p>
+
+<pre><code>  cd octopress
+</code></pre>
 
 <h3>Install related tools</h3>
 
-<p>  <strong>sudo gem install bundler</strong><br/>
-  <strong>bundle install</strong><br/>
-  <strong>rake install</strong><br/>
-  if you see warning: <em>&ldquo;You have already activated rake 0.9.6, but your Gemfile requires rake 0.9.2.2.&rdquo;</em><br/>
-  it means version of rake is 0.9.2.2,it is too old,need update rake,using command<br/>
-  <strong>boundle update rake</strong>.<br/>
-  Make sure all the previous steps are success and then you can go to next step.</p>
+<pre><code>sudo gem install bundler  
+bundle install  
+rake install  
+</code></pre>
+
+<p>  if you get warning: <em>&ldquo;You have already activated rake 0.9.6, but your Gemfile requires rake 0.9.2.2.&rdquo;</em><br/>
+  it means version of rake is 0.9.2.2,it is too old,need update rake,using command</p>
+
+<pre><code>boundle update rake   
+</code></pre>
+
+<p>  Make sure all the previous steps are success and then you can go to next step.</p>
 
 <h1>Deploy blog</h1>
 
 <p>  I will deploy my blog to Github.<br/>
   First, you need create a <a href="https://github.com/eimlfang/eimlfang.github.com">responsitories</a> called eimlfang.github.com.<br/>
-  Than using <strong>rake setup_github_pages</strong>,input your url and password.<br/>
-  <strong>rake generate</strong><br/>
-  <strong>rake deploy</strong>
-  These two commands generate blog files and copy to <em>_deploy/</em> dir,than commit source to git.<br/>
-  <strong>git add .</strong><br/>
-  <strong>git commit -m &lsquo;Initial source commit&rsquo;</strong><br/>
-  <strong>git push origin source</strong>
-  Delopy done</p>
+  Than using</p>
+
+<pre><code>rake setup_github_pages**//input your url and password.  
+rake generate  
+rake deploy**
+</code></pre>
+
+<p>  These two commands generate blog files and copy to <em>_deploy/</em> dir,than commit source to git.</p>
+
+<pre><code>  git add .  
+  git commit -m 'Initial source commit' 
+  git push origin source
+</code></pre>
+
+<p>  Delopy done</p>
 
 <h1>Write/Publish blog</h1>
 
-<p>  create new blog:<br/>
-  <strong>rake new_post[&ldquo;title&rdquo;]</strong><br/>
-  <strong>rake generate</strong><br/>
-  <strong>git add .</strong><br/>
-  <strong>git commit -am &ldquo;Some comment here.&rdquo;</strong><br/>
-  <strong>git push origin source</strong><br/>
-  <strong>rake deploy</strong></p>
+<p>  create new blog:</p>
+
+<pre><code>  rake new_post["title"] // post blog named title  
+  rake generate  
+  git add . 
+  git commit -am "Some comment here."**  
+  git push origin source*  
+  rake deploy
+</code></pre>
 ]]></content>
   </entry>
   
