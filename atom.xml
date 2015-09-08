@@ -4,7 +4,7 @@
   <title><![CDATA[我的时光]]></title>
   <link href="http://eimlfang.github.io/atom.xml" rel="self"/>
   <link href="http://eimlfang.github.io/"/>
-  <updated>2015-09-08T17:31:22+08:00</updated>
+  <updated>2015-09-08T17:37:42+08:00</updated>
   <id>http://eimlfang.github.io/</id>
   <author>
     <name><![CDATA[Zijian Fang]]></name>
@@ -62,9 +62,9 @@ rake install
   First, you need create a <a href="https://github.com/eimlfang/eimlfang.github.com">responsitories</a> called eimlfang.github.com.<br/>
   Than using</p>
 
-<pre><code>rake setup_github_pages**//input your url and password.  
+<pre><code>rake setup_github_pages
 rake generate  
-rake deploy**
+rake deploy
 </code></pre>
 
 <p>  These two commands generate blog files and copy to <em>_deploy/</em> dir,than commit source to git.</p>
@@ -83,8 +83,8 @@ rake deploy**
 <pre><code>  rake new_post["title"] // post blog named title  
   rake generate  
   git add . 
-  git commit -am "Some comment here."**  
-  git push origin source*  
+  git commit -am "Some comment here."  
+  git push origin source
   rake deploy
 </code></pre>
 ]]></content>
