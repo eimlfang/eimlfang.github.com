@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[我的时光]]></title>
   <link href="http://eimlfang.github.io/atom.xml" rel="self"/>
   <link href="http://eimlfang.github.io/"/>
-  <updated>2015-09-08T15:29:57+08:00</updated>
+  <updated>2015-09-08T15:46:00+08:00</updated>
   <id>http://eimlfang.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Zijian Fang]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Welcome]]></title>
+    <link href="http://eimlfang.github.io/blog/2015/09/08/welcome/"/>
+    <updated>2015-09-08T15:43:06+08:00</updated>
+    <id>http://eimlfang.github.io/blog/2015/09/08/welcome</id>
+    <content type="html"><![CDATA[<p>这是我在Octopress的第一个博客.</p>
+]]></content>
+  </entry>
   
 </feed>
