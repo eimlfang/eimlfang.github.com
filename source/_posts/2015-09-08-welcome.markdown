@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Welcome"
+date: 2015-09-08 15:43:06 +0800
+comments: true
+categories: 
+---
+这是我在Octopress的第一个博客.
