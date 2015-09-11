@@ -9,7 +9,16 @@
   <meta name="author" content="Zijian Fang">
 
   
-  <meta name="description" content="First Step: Install environment -Needs Tools Git,Ruby -Install Ruby Checking ruby versions of your mac,it is only supporting Ruby version upper than &hellip;">
+  <meta name="description" content="试图创建一个脚本CreateNewBlog.sh用来发布博客: 1
+2
+3
+4
+5
+#! /bin/bash
+printf "Please Input your new Blog Name-&gt;"
+read BLOG_NAME
+rake new_post["$BLOG_NAM"]
+echo " &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +74,74 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/09/11/pushshell/">PushShell</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-09-11T12:03:45+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:03 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>试图创建一个脚本<strong>CreateNewBlog.sh</strong>用来发布博客:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#! /bin/bash
+</span><span class='line'>printf "Please Input your new Blog Name-&gt;"
+</span><span class='line'>read BLOG_NAME
+</span><span class='line'>rake new_post["$BLOG_NAM"]
+</span><span class='line'>echo "Created $BLOG_NAME"</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd octopress
+</span><span class='line'>$ /Users/besprout/Desktop/CreateNewBlog.sh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>接着出现了</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Please Input your new Blog Name-&gt;pushsh
+</span><span class='line'>Hello pushsh
+</span><span class='line'>Enter a title for your post: PushShell
+</span><span class='line'>mkdir -p source/_posts
+</span><span class='line'>Creating new post: source/_posts/2015-09-11-pushshell.markdown
+</span><span class='line'>$ cd source/_posts/2015-09-11-pushshell.markdown  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>但是还需要我输入博客名称,且继续学习脚本吧！</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -203,6 +280,10 @@ rake deploy
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/09/11/pushshell/">PushShell</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/09/08/how-to-install-octopress-in-mac/">How to Install Octopress in Mac</a>

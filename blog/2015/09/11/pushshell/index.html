@@ -5,11 +5,20 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>How to Install Octopress in Mac - 我的时光</title>
+  <title>PushShell - 我的时光</title>
   <meta name="author" content="Zijian Fang">
 
   
-  <meta name="description" content="First Step: Install environment -Needs Tools Git,Ruby -Install Ruby Checking ruby versions of your mac,it is only supporting Ruby version upper than &hellip;">
+  <meta name="description" content="试图创建一个脚本CreateNewBlog.sh用来发布博客: 1
+2
+3
+4
+5
+#! /bin/bash
+printf "Please Input your new Blog Name-&gt;"
+read BLOG_NAME
+rake new_post["$BLOG_NAM"]
+echo " &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +27,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://eimlfang.github.io/blog/2015/09/08/how-to-install-octopress-in-mac/">
+  <link rel="canonical" href="http://eimlfang.github.io/blog/2015/09/11/pushshell/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="我的时光" type="application/atom+xml">
@@ -68,7 +77,7 @@
   
   <header>
     
-      <h1 class="entry-title">How to Install Octopress in Mac</h1>
+      <h1 class="entry-title">PushShell</h1>
     
     
       <p class="meta">
@@ -77,82 +86,53 @@
 
 
 
-<time class='entry-date' datetime='2015-09-08T15:58:54+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>3:58 pm</span></time>
+<time class='entry-date' datetime='2015-09-11T12:03:45+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:03 pm</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h1>First Step: Install environment</h1>
+<div class="entry-content"><p>试图创建一个脚本<strong>CreateNewBlog.sh</strong>用来发布博客:</p>
 
-<h2>-Needs Tools</h2>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#! /bin/bash
+</span><span class='line'>printf "Please Input your new Blog Name-&gt;"
+</span><span class='line'>read BLOG_NAME
+</span><span class='line'>rake new_post["$BLOG_NAM"]
+</span><span class='line'>echo "Created $BLOG_NAME"</span></code></pre></td></tr></table></div></figure>
 
-<p>  Git,Ruby</p>
 
-<h2>-Install Ruby</h2>
+<p></p>
 
-<p>  Checking ruby versions of your mac,it is only supporting Ruby version upper than 1.9.3.</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd octopress
+</span><span class='line'>$ /Users/besprout/Desktop/CreateNewBlog.sh
+</span></code></pre></td></tr></table></div></figure>
 
-<h2>-Install Octopress</h2>
 
-<p>  input:</p>
+<p>接着出现了</p>
 
-<pre><code>  git clone git://github.com/imathis/octopress.git octopress**  
-</code></pre>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Please Input your new Blog Name-&gt;pushsh
+</span><span class='line'>Hello pushsh
+</span><span class='line'>Enter a title for your post: PushShell
+</span><span class='line'>mkdir -p source/_posts
+</span><span class='line'>Creating new post: source/_posts/2015-09-11-pushshell.markdown
+</span><span class='line'>$ cd source/_posts/2015-09-11-pushshell.markdown  </span></code></pre></td></tr></table></div></figure>
 
-<p>  git will clone Octopress from github to local dictionary named &ldquo;octopress&rdquo;<br/>
-  than input :</p>
 
-<pre><code>  cd octopress
-</code></pre>
-
-<h3>Install related tools</h3>
-
-<pre><code>sudo gem install bundler  
-bundle install  
-rake install  
-</code></pre>
-
-<p>  if you get warning: <em>&ldquo;You have already activated rake 0.9.6, but your Gemfile requires rake 0.9.2.2.&rdquo;</em><br/>
-  it means version of rake is 0.9.2.2,it is too old,need update rake,using command</p>
-
-<pre><code>boundle update rake   
-</code></pre>
-
-<p>  Make sure all the previous steps are success and then you can go to next step.</p>
-
-<h1>Deploy blog</h1>
-
-<p>  I will deploy my blog to Github.<br/>
-  First, you need create a <a href="https://github.com/eimlfang/eimlfang.github.com">responsitories</a> called eimlfang.github.com.<br/>
-  Than using</p>
-
-<pre><code>rake setup_github_pages
-rake generate  
-rake deploy
-</code></pre>
-
-<p>  These two commands generate blog files and copy to <em>_deploy/</em> dir,than commit source to git.</p>
-
-<pre><code>  git add .  
-  git commit -m 'Initial source commit' 
-  git push origin source
-</code></pre>
-
-<p>  Delopy done</p>
-
-<h1>Write/Publish blog</h1>
-
-<p>  create new blog:</p>
-
-<pre><code>  rake new_post["title"] // post blog named title  
-  rake generate  
-  git add . 
-  git commit -am "Some comment here."  
-  git push origin source
-  rake deploy
-</code></pre>
+<p>但是还需要我输入博客名称,且继续学习脚本吧！</p>
 </div>
 
 
@@ -168,7 +148,7 @@ rake deploy
 
 
 
-<time class='entry-date' datetime='2015-09-08T15:58:54+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>3:58 pm</span></time>
+<time class='entry-date' datetime='2015-09-11T12:03:45+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:03 pm</span></time>
       
 
 
@@ -183,10 +163,8 @@ rake deploy
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2015/09/08/welcome/" title="Previous Post: Welcome">&laquo; Welcome</a>
+        <a class="basic-alignment left" href="/blog/2015/09/08/how-to-install-octopress-in-mac/" title="Previous Post: How to install Octopress in Mac">&laquo; How to install Octopress in Mac</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2015/09/11/pushshell/" title="Next Post: PushShell">PushShell &raquo;</a>
       
     </p>
   </footer>
